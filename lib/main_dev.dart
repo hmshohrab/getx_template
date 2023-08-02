@@ -8,7 +8,7 @@ import '/flavors/environment.dart';
 import 'app/my_app.dart';
 import 'data/end_points.dart';
 
-Future<void> main() async {
+void main()  {
   EnvConfig devConfig = EnvConfig(
     appName: "GetX Template Dev",
     baseUrl: baseUrlApi,
@@ -20,7 +20,6 @@ Future<void> main() async {
     envConfig: devConfig,
   );
 
-  // Add this code below
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }

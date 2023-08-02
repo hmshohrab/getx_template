@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:get/get.dart';
 
 import '/app/network/pretty_dio_logger.dart';
 import '/app/network/request_headers.dart';
@@ -22,8 +23,8 @@ class DioProvider {
 
   static final BaseOptions _options = BaseOptions(
     baseUrl: baseUrl,
-    connectTimeout: 60 * 1000,
-    receiveTimeout: 60 * 1000,
+    connectTimeout: 60000.seconds,
+    receiveTimeout: 60000.seconds,
   );
 
   static Dio get httpDio {

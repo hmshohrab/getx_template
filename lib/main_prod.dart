@@ -15,6 +15,7 @@ void main() {
 
   BuildConfig.instantiate(
       envType: Environment.PRODUCTION, envConfig: prodConfig);
+
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }

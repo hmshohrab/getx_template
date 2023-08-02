@@ -1,4 +1,4 @@
-import '../../../safe_convert.dart';
+import '../../../utils/safe_convert.dart';
 
 class DataResponse<T extends Serializable> {
   DataResponse({
