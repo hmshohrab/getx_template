@@ -2,10 +2,6 @@ import 'package:get/get.dart';
 
 import '/app/data/repository/global_repository.dart';
 import '/app/data/repository/global_repository_impl.dart';
-import '../data/repository/auth/auth_repository.dart';
-import '../data/repository/auth/auth_repository_impl.dart';
-import '../data/repository/dashboard/dash_repository.dart';
-import '../data/repository/dashboard/dash_repository_impl.dart';
 
 class RepositoryBindings implements Bindings {
   @override
@@ -19,13 +15,6 @@ class RepositoryBindings implements Bindings {
           loggingInterceptor: LoggingInterceptor()),
       tag: (DioClient).toString(),
     );*/
-    Get.lazyPut<AuthRepository>(
-      () => AuthRepositoryImpl(),
-      tag: (AuthRepository).toString(),
-    );
-    Get.lazyPut<DashRepository>(
-      () => DashRepositoryImpl(),
-      tag: (DashRepository).toString(),
-    );
+
   }
 }

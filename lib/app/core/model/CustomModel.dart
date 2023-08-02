@@ -4,10 +4,8 @@ class CustomModel<T> extends Serializable {
   T? data;
 
   CustomModel({
-    T? data,
-  }) {
-    this.data = data;
-  }
+    this.data,
+  });
 
   @override
   Map<String, dynamic> toJson() {
