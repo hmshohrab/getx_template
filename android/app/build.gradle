@@ -1,3 +1,6 @@
+import java.util.regex.Matcher
+import java.util.regex.Pattern
+
 def localProperties = new Properties()
 def localPropertiesFile = rootProject.file('local.properties')
 if (localPropertiesFile.exists()) {
@@ -19,6 +22,29 @@ if (flutterVersionCode == null) {
 def flutterVersionName = localProperties.getProperty('flutter.versionName')
 if (flutterVersionName == null) {
     flutterVersionName = '1.0'
+}
+
+def getCurrentFlavor() {
+    Gradle gradle = getGradle()
+    String tskReqStr = gradle.getStartParameter().getTaskRequests().toString()
+
+    Pattern pattern
+    println(tskReqStr)
+    if (tskReqStr.contains("assemble"))
+        pattern = Pattern.compile("assemble(\\w+)(Release|Debug)")
+    else if (tskReqStr.contains("bundle"))
+        pattern = Pattern.compile("bundle(\\w+)(Release|Debug)")
+    else
+        pattern = Pattern.compile("generate(\\w+)(Release|Debug)")
+
+    Matcher matcher = pattern.matcher(tskReqStr)
+
+    if (matcher.find())
+        return matcher.group(1).toLowerCase()
+    else {
+        println "NO MATCH FOUND"
+        return ""
+    }
 }
 
 apply plugin: 'com.android.application'
@@ -61,10 +87,26 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+    flavorDimensions "default"
+    productFlavors {
+        dev {
+            dimension "default"
+            applicationIdSuffix ".dev"
+        }
+        prod {
+            dimension "default"
+        }
+    }
+    lint {
+        checkReleaseBuilds false
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
 }
-
 flutter {
     source '../..'
+    target "lib/main_" + getCurrentFlavor() + ".dart"
 }
 
 dependencies {

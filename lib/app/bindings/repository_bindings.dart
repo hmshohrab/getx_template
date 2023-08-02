@@ -15,6 +15,5 @@ class RepositoryBindings implements Bindings {
           loggingInterceptor: LoggingInterceptor()),
       tag: (DioClient).toString(),
     );*/
-
   }
 }

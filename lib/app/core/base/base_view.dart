@@ -98,7 +98,7 @@ abstract class BaseView<Controller extends BaseController>
   }
 
   void showToast(String message) {
-   /* Fluttertoast.showToast(
+    /* Fluttertoast.showToast(
         msg: message, toastLength: Toast.LENGTH_SHORT, timeInSecForIosWeb: 1);*/
   }
 

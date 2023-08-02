@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '/app/core/base/base_view.dart';
 import '/app/modules/home/controllers/home_controller.dart';
 import '../../../../data/count_item.dart';
-import '../../../../utils/color_resources.dart';
 import '../../../../utils/dimensions.dart';
 import '../../../../utils/extensions.dart';
-import '../../../../utils/images.dart';
-import '../../../routes/app_pages.dart';
 
 class HomeView extends BaseView<HomeController> {
   final List<CountItem> countItemList = [];
@@ -44,5 +40,4 @@ class HomeView extends BaseView<HomeController> {
       ],
     );
   }
-
 }

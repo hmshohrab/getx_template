@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../my_app.dart';
 import '/app/core/base/base_view.dart';
+import '../../../my_app.dart';
 import '../controllers/other_controller.dart';
 
 class OtherView extends BaseView<OtherController> {

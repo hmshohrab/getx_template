@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '/app/core/base/base_widget_mixin.dart';
 import '/app/core/values/app_colors.dart';
@@ -8,7 +7,6 @@ import '/app/core/values/text_styles.dart';
 import '/app/core/widget/elevated_container.dart';
 import '/app/core/widget/icon_text_widgets.dart';
 import '/app/modules/home/model/github_project_ui_data.dart';
-import '/app/routes/app_pages.dart';
 import '../../../core/widget/ripple.dart';
 
 class ItemGithubProject extends StatelessWidget with BaseWidgetMixin {

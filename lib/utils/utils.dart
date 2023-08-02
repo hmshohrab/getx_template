@@ -29,7 +29,8 @@ class Utils {
     }
   }
 
-  static leaveDialog(context, {title="Are you sure you want to leave this page?"}) async {
+  static leaveDialog(context,
+      {title = "Are you sure you want to leave this page?"}) async {
     return await showDialog(
       context: context,
       builder: (context) => AlertDialog(
@@ -64,7 +65,8 @@ class Utils {
     );
   }
 
-  static anotherFileUploadDialog(context, {title="Are you sure you want to leave this page?"}) async {
+  static anotherFileUploadDialog(context,
+      {title = "Are you sure you want to leave this page?"}) async {
     return await showDialog(
       context: context,
       builder: (context) => AlertDialog(
@@ -80,14 +82,14 @@ class Utils {
           TextButton(
             style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.resolveWith<Color?>(
-                      (Set<MaterialState> states) {
-                    if (states.contains(MaterialState.pressed)) {
-                      return Colors.green; // Set the color to red when pressed
-                    }
-                    return ColorResources
-                        .kPrimaryColor; // Use the default color when not pressed
-                  },
-                )),
+              (Set<MaterialState> states) {
+                if (states.contains(MaterialState.pressed)) {
+                  return Colors.green; // Set the color to red when pressed
+                }
+                return ColorResources
+                    .kPrimaryColor; // Use the default color when not pressed
+              },
+            )),
             child: Text(
               'YES',
               style: whiteText16,

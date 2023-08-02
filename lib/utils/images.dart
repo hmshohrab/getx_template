@@ -44,7 +44,7 @@ class SVGAssets {
 class ImagesAssets {
   static const logo = "assets/images/logo.png";
   static const appLogo = "assets/images/ic_rab.png";
-   static const error = "assets/images/error.png";
+  static const error = "assets/images/error.png";
   static const loading = "assets/icons/loading.gif";
   static const headerLogo = "assets/images/header_logo.png";
   static const headerLogo2 = "assets/images/header_logo2.png";

@@ -7,10 +7,13 @@ const baseUrlApi = "${baseUrl}api/";
 class Endpoints {
   static const loginUrl = "${baseUrlApi}User/VerifryUserMobile";
   static const changePasswordUrl = "${baseUrlApi}secuirity/changepassword";
-  static const getByRefNoRawDataUrl = "${baseUrlApi}dataMigration/getByRefNoRawData";
-  static const getAllAttachmentTypeUrl = "${baseUrlApi}AttachmentType/getAllAttachmentType";
+  static const getByRefNoRawDataUrl =
+      "${baseUrlApi}dataMigration/getByRefNoRawData";
+  static const getAllAttachmentTypeUrl =
+      "${baseUrlApi}AttachmentType/getAllAttachmentType";
   static const beatVisitUtilsUrl = "${baseUrlApi}beat/visit/utils";
-  static const dashboardMobileUrl = "${baseUrlApi}dataMigration/getDashboard_Mobile";
+  static const dashboardMobileUrl =
+      "${baseUrlApi}dataMigration/getDashboard_Mobile";
   static const saveAttachmentUrl =
       "${baseUrlApi}dataMigration/saveAttachmentWithDataMigrationRawDataID_Mobile";
   static const deleteAttachmentUrl = "${baseUrlApi}Attachment/deleteAttachment";
