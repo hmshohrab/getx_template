@@ -24,7 +24,7 @@ class BottomNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     appLocalization = AppLocalizations.of(context)!;
 
-    Color selectedItemColor = Colors.white;
+    Color selectedItemColor = Colors.black;
     Color unselectedItemColor = Colors.grey;
     List<BottomNavItem> navItems = _getNavItems();
 
@@ -50,7 +50,7 @@ class BottomNavBar extends StatelessWidget {
         showSelectedLabels: true,
         showUnselectedLabels: true,
         type: BottomNavigationBarType.fixed,
-        backgroundColor: AppColors.colorAccent,
+        backgroundColor: AppColors.colorWhite,
         selectedItemColor: selectedItemColor,
         unselectedItemColor: unselectedItemColor,
         currentIndex: navController.selectedIndex,

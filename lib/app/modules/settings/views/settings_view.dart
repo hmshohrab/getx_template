@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../utils/extensions.dart';
 import '/app/core/base/base_view.dart';
 import '/app/modules/settings/controllers/settings_controller.dart';
 import '/app/modules/settings/widgets/item_settings_widgets.dart';
@@ -7,7 +8,8 @@ import '/app/modules/settings/widgets/item_settings_widgets.dart';
 class SettingsView extends BaseView<SettingsController> {
   @override
   PreferredSizeWidget? appBar(BuildContext context) {
-    return null;
+    return getAppBar(context, "Settings",
+        onBackPressed: null, enableBackButton: false);
   }
 
   @override
