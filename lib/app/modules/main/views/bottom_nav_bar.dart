@@ -35,7 +35,7 @@ class BottomNavBar extends StatelessWidget {
             .map(
               (BottomNavItem navItem) => BottomNavigationBarItem(
                   icon: SvgPicture.asset(
-                    "images/${navItem.iconSvgName}",
+                    "assets/icons/${navItem.iconSvgName}",
                     height: AppValues.iconDefaultSize,
                     width: AppValues.iconDefaultSize,
                     color:
@@ -69,10 +69,6 @@ class BottomNavBar extends StatelessWidget {
         iconSvgName: "ic_home.svg",
         menuCode: MenuCode.HOME,
       ),
-      BottomNavItem(
-          navTitle: appLocalization.bottomNavFavorite,
-          iconSvgName: "ic_favorite.svg",
-          menuCode: MenuCode.FAVORITE),
       BottomNavItem(
           navTitle: appLocalization.bottomNavSettings,
           iconSvgName: "ic_settings.svg",

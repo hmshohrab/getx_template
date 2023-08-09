@@ -8,6 +8,7 @@ import '/app/modules/main/controllers/main_controller.dart';
 import '/app/modules/main/model/menu_code.dart';
 import '/app/modules/other/views/other_view.dart';
 import '/app/modules/settings/views/settings_view.dart';
+import 'bottom_nav_bar.dart';
 
 // ignore: must_be_immutable
 class MainView extends BaseView<MainController> {
@@ -20,19 +21,16 @@ class MainView extends BaseView<MainController> {
   Widget body(BuildContext context) {
     return Container(
       key: UniqueKey(),
-      // child: Obx(() => loginView),
       child: Obx(() => getPageOnSelectedMenu(controller.selectedMenuCode)),
     );
   }
 
-/*
 
   @override
   Widget? bottomNavigationBar() {
 
     return BottomNavBar(onNewMenuSelected: controller.onMenuSelected);
   }
-*/
 
   HomeView? homeView;
   SettingsView? settingsView;

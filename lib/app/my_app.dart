@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
       title: _envConfig.appName,
       initialRoute: AppPages.INITIAL,
       initialBinding: InitialBinding(),
@@ -35,10 +35,10 @@ class _MyAppState extends State<MyApp> {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         brightness: Brightness.light,
         primaryColor: AppColors.colorPrimary,
-        textTheme: const TextTheme(
-          bodyText1: TextStyle(fontSize: 18.0),
-          bodyText2: TextStyle(fontSize: 16.0),
-          button: TextStyle(
+        textTheme:   const TextTheme(
+          bodyLarge: TextStyle(fontSize: 18.0),
+          bodySmall: TextStyle(fontSize: 16.0),
+          labelLarge: TextStyle(
             color: Colors.white,
             fontSize: 20.0,
             fontWeight: FontWeight.bold,

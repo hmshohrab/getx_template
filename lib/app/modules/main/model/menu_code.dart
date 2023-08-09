@@ -1,1 +1,1 @@
-enum MenuCode { HOME, FAVORITE, SETTINGS }
+enum MenuCode { HOME, SETTINGS }
