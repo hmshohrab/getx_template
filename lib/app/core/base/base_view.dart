@@ -70,9 +70,11 @@ abstract class BaseView<Controller extends BaseController>
   }
 
   Widget pageContent(BuildContext context) {
-    return SafeArea(
-      child: body(context),
-    );
+    return (useSafeArea())
+        ? SafeArea(
+            child: body(context),
+          )
+        : body(context);
   }
 
   Widget showErrorSnackBar(String message) {
@@ -108,6 +110,10 @@ abstract class BaseView<Controller extends BaseController>
 
   Color statusBarColor() {
     return AppColors.pageBackground;
+  }
+
+  bool useSafeArea() {
+    return true;
   }
 
   Widget? floatingActionButton() {
