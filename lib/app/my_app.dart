@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:get/get.dart';
 
@@ -35,7 +36,7 @@ class _MyAppState extends State<MyApp> {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         brightness: Brightness.light,
         primaryColor: AppColors.colorPrimary,
-        textTheme:   const TextTheme(
+        textTheme: const TextTheme(
           bodyLarge: TextStyle(fontSize: 18.0),
           bodySmall: TextStyle(fontSize: 16.0),
           labelLarge: TextStyle(
@@ -63,6 +64,16 @@ class _MyAppState extends State<MyApp> {
             borderRadius: BorderRadius.all(
               Radius.circular(15),
             ),
+          ),
+        ),
+        appBarTheme: const AppBarTheme(
+          iconTheme: IconThemeData(color: Colors.black),
+          color: Colors.deepPurpleAccent,
+          foregroundColor: Colors.black,
+          systemOverlayStyle: SystemUiOverlayStyle(
+            statusBarColor: Colors.transparent,
+            statusBarIconBrightness: Brightness.dark,
+            statusBarBrightness: Brightness.light,
           ),
         ),
         fontFamily: 'Roboto',
